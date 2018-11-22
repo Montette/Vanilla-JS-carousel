@@ -47,4 +47,33 @@
     })
     
     switchImg()
+
+
+
+    
+    // swiped-left
+    
+    document.addEventListener('swiped-left', function(e) {
+    currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+    }
+    switchImg()
+    });
+    
+     
+    
+    // swiped-right
+    
+    document.addEventListener('swiped-right', function(e) {
+        currentIndex++;
+        if (currentIndex >= images.length) {
+            currentIndex = 0;
+        }
+        switchImg() 
+    });
+    
+     
+
+
 })()
